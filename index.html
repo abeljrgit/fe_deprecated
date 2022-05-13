@@ -2,13 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Interactive Rating Component</title>
   </head>
   <body>
     <main>
       <!-- Write Code Here -->
+      <div class="card card--1">
+        <div class="card__star-btn">
+          <img src="./src/img/icon-star.svg" alt="Favorite-Star" />
+        </div>
+        <h1 class="card__title">How did we do?</h1>
+        <p class="card__details">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <div class="card__rating">
+          <div class="card__rating-number">1</div>
+          <div class="card__rating-number">2</div>
+          <div class="card__rating-number">3</div>
+          <div class="card__rating-number">4</div>
+          <div class="card__rating-number">5</div>
+        </div>
+        <div class="card__submit-btn">SUBMIT</div>
+      </div>
+
+      <div class="card card--2 card--hidden">
+        <div class="card__phone-img">
+          <img src="./src/img/illustration-thank-you.svg" alt="Phone" />
+        </div>
+        <div class="card__result-poll">You selected 4 out of 5</div>
+        <h1 class="card__title card__title--center">Thank you!</h1>
+        <p class="card__details card__details--center">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+      </div>
     </main>
 
     <!-- scripts -->

@@ -1,4 +1,146 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+$Orange: hsl(25, 97%, 53%);
+$White: hsl(0, 0%, 100%);
+$Light-Grey: hsl(217, 12%, 63%);
+$Medium-Grey: hsl(216, 12%, 54%);
+$Dark-Blue: hsl(213, 19%, 18%);
+$Very-Dark-Blue: hsl(216, 12%, 8%);
+
+html {
+  font-family: "Overpass", sans-serif;
+}
+
+main {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background-color: $Very-Dark-Blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 27rem;
+  padding: 2rem;
+  background-color: $Dark-Blue;
+  background-color: rgba($Dark-Blue, 0.5);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  &--hidden {
+    display: none;
+  }
+
+  &__star-btn {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10rem;
+    background-color: $Dark-Blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    & > img {
+      display: block;
+    }
+  }
+
+  &__phone-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.4rem;
+
+    & > img {
+      display: block;
+      width: 12rem;
+    }
+  }
+
+  &__result-poll {
+    font-size: 1.2rem;
+    line-height: 1;
+    color: $Orange;
+    background-color: $Dark-Blue;
+    padding: 0.7rem 1.5rem 0.5rem 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.4rem;
+    border-radius: 10rem;
+  }
+
+  &__title {
+    color: $White;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__details {
+    color: $Medium-Grey;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  &__rating-number {
+    font-weight: 700;
+    color: $Medium-Grey;
+    background-color: $Dark-Blue;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:hover {
+      color: $White;
+      background-color: $Orange;
+      transition: all 0.25s ease;
+    }
+
+    &--active {
+      color: $White;
+      background-color: $Light-Grey;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__submit-btn {
+    color: $White;
+    background-color: $Orange;
+    padding: 0.2rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    padding: 1rem 0;
+    border-radius: 50rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:hover {
+      color: $Orange;
+      background-color: $White;
+      transition: all 0.25s ease;
+    }
+  }
 }
