@@ -2,3 +2,171 @@ body {
   width: 100%;
   height: 100%;
 }
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+body,
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+main {
+  background: url("../img/pattern-background-desktop.svg") no-repeat,
+    $Very-pale-blue;
+  background-position: top;
+  background-size: 100% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 40rem;
+  box-shadow: 5.25px 21px 21px $Pale-blue;
+  @media screen and (max-width: 400px) {
+    width: 35rem;
+  }
+
+  &__thumbnail {
+    width: 100%;
+
+    & > img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__details {
+    padding: 4rem 4rem 5rem 4rem;
+    @media screen and(max-width:400px) {
+      padding: 3.5rem 3.5rem 4rem 3.5rem;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 2.4rem;
+    color: $Dark-blue;
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+
+  &__info {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $Desaturated-blue;
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+
+  &__plan {
+    display: flex;
+    align-items: center;
+    background-color: $Very-pale-blue;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  &__plan-logo {
+    & > img {
+      display: block;
+    }
+  }
+
+  &__plan-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    margin-left: 2rem;
+
+    & > span:nth-of-type(1) {
+      font-weight: 900;
+      color: $Dark-blue;
+      @media screen and(max-width:400px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    & > span:nth-of-type(2) {
+      color: $Desaturated-blue;
+      @media screen and(max-width:400px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__plan-link {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $Bright-blue;
+    margin-left: auto;
+    @media screen and(max-width:400px) {
+      font-size: 1.2rem;
+    }
+
+    transition: all 0.25s ease;
+
+    &:hover {
+      opacity: 0.7;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__proceed {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: $Very-pale-blue;
+    background-color: $Bright-blue;
+    border: 0.1rem solid $Bright-blue;
+    border-radius: 1rem;
+    padding: 1.6rem 0;
+    cursor: pointer;
+    box-shadow: 5.25px 21px 21px $Pale-blue;
+    transition: all 0.25s ease;
+
+    &:hover {
+      opacity: 0.7;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__cancel {
+    display: block;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $Desaturated-blue;
+    text-align: center;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    text-decoration: none;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $Dark-blue;
+      transition: all 0.5s ease;
+    }
+  }
+}
